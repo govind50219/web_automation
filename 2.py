@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 i=0 #no need to do so but doing is better
-for i in range (0,100):
+for i in range (0,2):
     #a for loop to execute the code 100 times
     browser = webdriver.Chrome('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe')#connection to the browser to use selenium
 
@@ -18,6 +18,8 @@ for i in range (0,100):
     python_script = browser.find_element_by_xpath('//*[@id="mG61Hd"]/div/div/div[2]/div[3]/div/div[2]/div/span/div/div[1]/label/div/div[1]/div')
     python_script.click()
     #clicking on the Yes option of using python script
+    time.sleep(5)
+    #time to sleep for 5 sec so that all data can fill
     github_page = browser.find_element_by_name('entry.446099277')
     github_page.send_keys('https://github.com/govind50219/web_automation')
     #provinding the link to this code
